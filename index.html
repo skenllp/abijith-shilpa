@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhijith &amp; Shilpa — Wedding</title>
+  <meta name="description" content="Join us as we celebrate the wedding of Abhijith &amp; Shilpa" />
+  <link rel="canonical" href="https://abijith-shilpa.vercel.app/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abijith-shilpa.vercel.app/" />
+  <meta property="og:title" content="Abhijith &amp; Shilpa — Wedding Invitation" />
+  <meta property="og:description" content="Join us as we celebrate the wedding of Abhijith &amp; Shilpa" />
+  <meta property="og:image" content="https://abijith-shilpa.vercel.app/og.jpg" />
+  <meta property="og:image:secure_url" content="https://abijith-shilpa.vercel.app/og.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://abijith-shilpa.vercel.app/" />
+  <meta name="twitter:title" content="Abhijith &amp; Shilpa — Wedding Invitation" />
+  <meta name="twitter:description" content="Join us as we celebrate the wedding of Abhijith &amp; Shilpa" />
+  <meta name="twitter:image" content="https://abijith-shilpa.vercel.app/og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@500;600&family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Music toggle -->
+  <button id="musicBtn" class="music-btn" aria-label="Toggle music">
+    <svg viewBox="0 0 24 24" class="ico-on"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16.5 12a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/><path d="M14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+    <svg viewBox="0 0 24 24" class="ico-off"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/audio/Tera%20Noor.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ============ ENVELOPE COVER ============ -->
+  <div id="cover" class="cover" role="button" aria-label="Tap the seal to open">
+    <svg class="env-bg" viewBox="0 0 100 200" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="envGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f1f5ef"/><stop offset="1" stop-color="#dde9da"/>
+        </linearGradient>
+        <pattern id="swirl" width="50" height="40" patternUnits="userSpaceOnUse">
+          <path d="M4 12c8-6 16 4 10 9s-12-2-4-6 18 0 22-6M30 32c6-5 14 2 9 6s-9-3-1-6 10-1 14-5" fill="none" stroke="#b9cbb7" stroke-width=".25" opacity=".7"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="200" fill="url(#envGrad)"/>
+      <rect width="100" height="200" fill="url(#swirl)"/>
+      <!-- stitched border -->
+      <path d="M3 4V196H97V4" fill="none" stroke="#c9ab7c" stroke-width="1" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/>
+      <path d="M3 196H97" fill="none" stroke="#c9ab7c" stroke-width="2" stroke-dasharray="4 5" vector-effect="non-scaling-stroke"/>
+    </svg>
+
+    <div class="flap">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="flapGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#eef4ec"/><stop offset="1" stop-color="#cfe0cc"/>
+          </linearGradient>
+          <filter id="flapShadow" x="-10%" y="-10%" width="120%" height="130%">
+            <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#5d7a64" flood-opacity=".25"/>
+          </filter>
+        </defs>
+        <polygon points="0,0 100,0 50,100" fill="url(#flapGrad)" filter="url(#flapShadow)"/>
+        <polygon points="0,0 100,0 50,100" fill="url(#swirl)"/>
+        <path d="M3 0L50 94L97 0" fill="none" stroke="#c9ab7c" stroke-width="1.2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <span class="pearl p1"></span><span class="pearl p2"></span>
+      <span class="pearl p3"></span><span class="pearl p4"></span>
+    </div>
+
+    <button class="seal" id="sealBtn" aria-label="Open invitation">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <radialGradient id="sealGrad" cx="40%" cy="30%" r="75%">
+            <stop offset="0" stop-color="#8fb096"/><stop offset=".55" stop-color="#5d7f66"/><stop offset="1" stop-color="#3f5a47"/>
+          </radialGradient>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="url(#sealGrad)"/>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+        <line x1="40" y1="24" x2="40" y2="76" stroke="#f3efe2" stroke-width="2"/>
+        <line x1="60" y1="24" x2="60" y2="76" stroke="#f3efe2" stroke-width="2"/>
+        <text x="25" y="57" class="seal-txt" id="sealL">A</text>
+        <text x="50" y="57" class="seal-txt amp-t">&amp;</text>
+        <text x="75" y="57" class="seal-txt" id="sealR">S</text>
+      </svg>
+    </button>
+
+    <p class="cover-hint">Tap the seal to open</p>
+  </div>
+
+  <main class="page">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-frame" aria-hidden="true">
+        <video src="assets/video/bg.mp4" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto"></video>
+      </div>
+      <div class="hero-content">
+        <p class="hero-invite reveal">We cordially invite you to the<br />wedding of</p>
+        <h1 class="hero-names">
+          <span class="name n1 reveal" data-bind="groomName">Abhijith</span>
+          <span class="weds reveal">weds</span>
+          <span class="name n2 reveal" data-bind="brideName">Shilpa</span>
+        </h1>
+        <div class="divider reveal"><span></span><i></i><span></span></div>
+        <p class="hero-date reveal" data-bind="heroDate">Friday 20 November<br />2026</p>
+      </div>
+
+      <!-- Scroll down indicator -->
+      <a href="#hero" class="scroll-down" id="scrollDown" aria-label="Scroll down" onclick="document.querySelector('.quote-band').scrollIntoView({behavior:'smooth'}); return false;">
+        <span class="scroll-label">Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============ QUOTE + SAVE THE DATE ============ -->
+    <section class="quote-band">
+      <div class="band-top" aria-hidden="true"></div>
+      <div class="leaf-mark">❦</div>
+      <p class="quote reveal">Every love story is beautiful, but ours is our favorite. Join us as we begin our next chapter together.</p>
+      <div class="leaf-mark">❦</div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="story paper">
+      <h2 class="script-title reveal">Our Story</h2>
+      <div class="divider reveal"><span></span><i></i><span></span></div>
+      <p class="story-text reveal">“Some beautiful stories begin with a simple family introduction.” What started as a family-arranged meeting slowly blossomed into friendship, grew into love, and became a promise of forever. With the blessings of our families, we are ready to begin our beautiful journey together.</p>
+    </section>
+
+    <!-- ============ THE GROOM ============ -->
+    <section class="profile-section groom-section paper">
+      <p class="profile-tag reveal">The Groom</p>
+      <h2 class="script-title profile-name-title reveal" data-bind="groomName">Abhijith</h2>
+      <figure class="profile-frame reveal">
+        <div class="profile-img-wrap">
+          <img src="assets/images/groom.jpeg" alt="Groom - Abhijith" loading="lazy" />
+        </div>
+      </figure>
+      <div class="profile-bio reveal">
+        <p class="profile-rel">Son of</p>
+        <p class="profile-parents" data-bind-html="groomParents">Late Mr. Sudarsanan Achary<br />Mrs. Sunitha S</p>
+      </div>
+    </section>
+
+    <!-- ============ THE BRIDE ============ -->
+    <section class="profile-section bride-section paper">
+      <p class="profile-tag reveal">The Bride</p>
+      <h2 class="script-title profile-name-title reveal" data-bind="brideName">Shilpa</h2>
+      <figure class="profile-frame reveal">
+        <div class="profile-img-wrap">
+          <img src="assets/images/bride.jpeg" alt="Bride - Shilpa" loading="lazy" />
+        </div>
+      </figure>
+      <div class="profile-bio reveal">
+        <p class="profile-rel">Daughter of</p>
+        <p class="profile-parents" data-bind-html="brideParents">Mr. Sivadasan P<br />Mrs. Pushpakumari K P</p>
+      </div>
+    </section>
+
+    <section class="save-date paper">
+      <div class="tape tape-tl" aria-hidden="true"></div>
+      <div class="floral-side" aria-hidden="true"></div>
+      <h2 class="std-title reveal">Save <small>the</small> Date</h2>
+      <h3 class="cal-month reveal" id="calMonth">November 2026</h3>
+      <div class="calendar reveal" id="calendar"></div>
+    </section>
+
+    <!-- Floral strip / video slot -->
+    <section class="floral-strip" aria-hidden="true">
+      <!-- Replace with: <video src="assets/video/flowers.mp4" autoplay muted loop playsinline></video> -->
+    </section>
+
+    <!-- ============ INVITATION / COUPLE ============ -->
+    <section class="couple">
+      <p class="invite-text reveal">With hearts full of joy and gratitude, we request the honour of your presence as we celebrate this beautiful union. Your blessings and company would mean the world to us.</p>
+
+      <div class="arch reveal">
+        <div class="arch-frame" aria-hidden="true"></div>
+        <div class="arch-inner">
+          <p class="role">Groom</p>
+          <h3 class="person" data-bind="groomFull">Abhijith S</h3>
+          <p class="rel">S/o</p>
+          <p class="parents" data-bind-html="groomParents">Mr. Father Name<br />Mrs. Mother Name</p>
+
+          <div class="amp"><span></span>&amp;<span></span></div>
+
+          <p class="role">Bride</p>
+          <h3 class="person" data-bind="brideFull">Shilpa Das</h3>
+          <p class="rel">D/o</p>
+          <p class="parents" data-bind-html="brideParents">Mr. Father Name<br />Mrs. Mother Name</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="events">
+      <h2 class="sec-title reveal">Events</h2>
+      <p class="hint">(Tap card for next event)</p>
+      <div class="event-stack" id="eventStack"></div>
+      <div class="events-floral" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ VENUES ============ -->
+    <section class="venues paper">
+      <h2 class="script-title reveal">Venues</h2>
+      <div class="tabs" id="venueTabs"></div>
+      <div class="venue-card reveal">
+        <p class="venue-name" id="venueName"></p>
+        <div class="map-wrap"><iframe id="venueMap" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Venue map"></iframe></div>
+        <a id="venueLink" class="map-link" target="_blank" rel="noopener">View on Google Maps</a>
+      </div>
+      <div class="venue-illustration" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ COUNTDOWN ============ -->
+    <section class="countdown paper">
+      <div class="clock-deco" aria-hidden="true"></div>
+      <h2 class="script-title reveal">Counting Down</h2>
+      <p class="cd-date" id="cdDate"></p>
+      <div class="cd-grid">
+        <div class="cd-box"><b id="cdDays">0</b><span>Days</span></div>
+        <div class="cd-box"><b id="cdHours">0</b><span>Hours</span></div>
+        <div class="cd-box"><b id="cdMins">0</b><span>Minutes</span></div>
+        <div class="cd-box"><b id="cdSecs">0</b><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact">
+      <h2 class="sec-title reveal">Have Questions?</h2>
+      <p class="contact-sub">Reach out to us anytime — we are happy to help.</p>
+      <div class="phones" id="phones"></div>
+    </section>
+
+    <!-- ============ CLOSING ============ -->
+    <section class="closing paper">
+      <div class="leaf-mark">❦ ❦ ❦</div>
+      <p class="closing-text reveal">We warmly welcome you to celebrate with us. Your presence and blessings will make our day truly complete.</p>
+      <p class="with-love">With love,</p>
+      <h3 class="closing-names"><span data-bind="groomName">Abhijith</span> &amp; <span data-bind="brideName">Shilpa</span></h3>
+      <p class="blessings">Blessings from</p>
+      <p class="blessers" data-bind-html="blessings">Family Member One<br />Family Member Two</p>
+      <div class="bouquet" aria-hidden="true"></div>
+    </section>
+
+    <footer class="footer">Crafted with love</footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
